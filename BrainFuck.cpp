@@ -38,7 +38,7 @@ int Method_1_out(std::string& code,int& count) {
     for (unsigned int i = 0; i < code.size(); i++) {
         count++;
         if (count > BUG_STOP) {
-            std::cout << "Too many!";
+            std::cout << "Too many!\n";
             return 2;
         }
         switch (code[i]) {
@@ -70,7 +70,7 @@ int Method_1_out(std::string& code,int& count) {
                 break;
             }
         }
-    out << "\nreturn 0;}";
+    out << "\nreturn 0;\n}";
     std::cout << "Check out.cpp!";
     return 0;
 }        
@@ -80,7 +80,7 @@ int Method_2_cons(std::string& code,int& count, std::map<int,int>& jump) {
     for (unsigned int i = 0; i < code.size(); i++) {
         count++;
         if (count > BUG_STOP) {
-            std::cout << "Too many!";
+            std::cout << "Too many!\n";
             return 2;
         }
         switch (code[i]) {
@@ -137,14 +137,14 @@ int main() {
     std::cin >> method;
     std::string code;
     if ( method != 1 && method != 2) {
-        std::cout << "method are wrong!";
+        std::cout << "Invalid mode\n";
         return 1;
     }
     std::cin.get();
     std::cout << "Enter your code: " << '\n';
     std::getline(std::cin, code);
     if (!bracketOk(code, jump)) {
-        std::cout << "Wrong Cycle";
+        std::cout << "Wrong Cycle\n";
         return 1;
     }
     if (method == 1) {
