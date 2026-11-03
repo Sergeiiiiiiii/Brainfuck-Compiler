@@ -2,9 +2,9 @@
 
 A small console tool for the Brainfuck esoteric language. Two modes:
 
-1. **Interpret** — runs Brainfuck code right away
-2. **Transpile** — converts Brainfuck code into a C++ file (`out.cpp`),
+1. **Transpile** — converts Brainfuck code into a C++ file (`out.cpp`),
    which compiles with any C++ compiler and runs on its own
+2. **Interpret** — runs Brainfuck code right away
 
 Brainfuck is an esoteric language with only 8 commands, operating on a tape
 of 30,000 byte cells and a data pointer. Despite its minimalism it is
